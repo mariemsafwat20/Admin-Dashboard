@@ -1,0 +1,17 @@
+.admin-layout {
+  height: 100vh;
+
+   .mat-sidenav {
+        width: 220px;
+        color: #000;
+        border-radius: 0 !important;
+        overflow: hidden;
+        
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+}
