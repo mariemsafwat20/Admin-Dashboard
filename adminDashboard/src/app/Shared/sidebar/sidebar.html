@@ -1,0 +1,62 @@
+<div class="sidebar">
+    <mat-nav-list>
+        <!-- Dashboard -->
+        <a mat-list-item routerLink="/dashboard" routerLinkActive="active">
+            <mat-icon>dashboard</mat-icon>
+            <p>Dashboard</p>
+        </a>
+        <!-- Orders -->
+        <a mat-list-item routerLink="/orders" routerLinkActive="active">
+            <mat-icon>shopping_cart</mat-icon>
+            <p>Orders</p>
+        </a>
+        <!-- Users -->
+        <a mat-list-item routerLink="/users" routerLinkActive="active">
+            <mat-icon>person</mat-icon>
+            <p>Users</p>
+        </a>
+        <!-- Items -->
+        <a mat-list-item routerLink="/items" routerLinkActive="active">
+            <mat-icon>inventory_2</mat-icon>
+            <p>Items</p>
+        </a>
+        <!-- Transactions -->
+        <a mat-list-item routerLink="/transactions" routerLinkActive="active">
+            <mat-icon>payment</mat-icon>
+            <p>Transactions</p>
+        </a>
+        <!-- Reports -->
+        <a mat-list-item routerLink="/reports" routerLinkActive="active">
+            <mat-icon>bar_chart</mat-icon>
+            <p>Reports</p>
+        </a>
+
+        <mat-divider></mat-divider>
+        
+        <!-- Message -->
+        <a mat-list-item routerLink="/messages" routerLinkActive="active" class="has-badge">
+            <mat-icon>message</mat-icon>
+            <p style="color: #474747;">Message</p>
+            <span class="badge"></span>
+        </a>
+        <!-- Support -->
+        <a mat-list-item routerLink="/support" routerLinkActive="active">
+            <mat-icon>support_agent</mat-icon>
+            <p>Support</p>
+        </a>
+        <!-- Setting -->
+        <a mat-list-item routerLink="/settings" routerLinkActive="active">
+            <mat-icon>settings</mat-icon>
+            <p>Setting</p>
+        </a>
+    </mat-nav-list>
+    
+    <!-- Bottom User Info -->
+    <div class="sidebar-footer">
+        <img [src]="avatar" alt="Avatar" class="avatar" />
+        <div  .mat-sidenav class="user-info">
+            <span class="name">Artison Ukronie</span>
+            <span class="company">Company</span>
+        </div>
+    </div>
+</div>
