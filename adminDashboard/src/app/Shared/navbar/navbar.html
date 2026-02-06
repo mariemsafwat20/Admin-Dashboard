@@ -1,0 +1,27 @@
+<mat-toolbar class="top-navbar">
+    <!-- Search -->
+    <div class="navbar-left">
+        <div class="search-box">
+            <mat-icon>search</mat-icon>
+            <input type="text" placeholder="Search" />
+        </div>
+    </div>
+
+    <!-- Icons & Profile -->
+    <div class="navbar-right">
+        <!-- Store -->
+        <mat-icon class="icon">store</mat-icon>
+        <!-- Notification -->
+        <a class="has-badge">
+            <mat-icon class="icon">notifications</mat-icon>
+            <span class="badge"></span>
+        </a>
+
+        <!-- User -->
+        <div class="user-info">
+            <img [src]="profile" alt="User" />
+            <span class="username">Johny Larson</span>
+            <mat-icon style="color: #2C3E50;">keyboard_arrow_down</mat-icon>
+        </div>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,84 @@
+.top-navbar {
+    height: 71px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0   5rem;
+    .navbar-left {
+        width: 50%;
+    
+        // SearchInput
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #F8FAFB;
+            padding: 10px 16px;
+            border-radius: 10px;    
+    
+            mat-icon {
+                color: #C1CACE;
+                font-size: 20px;
+            }
+    
+            input {
+                width: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-size: 14px;
+                font-weight: 500;
+                color: #000;
+            }
+        }
+    }
+
+    // Icons & Profile
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        
+        .icon {
+            background-color: #E7EDF0;
+            color: #9DACB4;
+            border-radius: 5px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+        }
+
+        // Notifican Message
+        a.has-badge {
+            position: relative; 
+
+            .badge {
+                position: absolute;
+                top: -4px;
+                right: 0;
+                width: 10px;
+                height: 10px;
+                background-color: #FB7B7B;
+                border-radius: 50%;
+            }
+        }
+
+        // Profile
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+
+            .username {
+                font-family: 'Jost', sans-serif;
+                font-size: 15px;
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+}

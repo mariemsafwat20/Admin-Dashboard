@@ -3,9 +3,22 @@
     <mat-sidenav mode="side" opened class="sidebar">
         <div class="logo">
             <mat-icon>menu</mat-icon>
-            <h2>Manager Pro</h2>
+            <h2> Manager
+                <span style="color: #0561FC;">Pro</span>
+            </h2>
         </div>
         <!-- Sidebar links -->
         <app-sidebar></app-sidebar>
     </mat-sidenav>
+
+     <!-- Main Area -->
+    <mat-sidenav-content>
+        <!-- Top Navbar -->
+        <app-navbar></app-navbar>
+
+        <!-- Routed Pages -->
+        <main class="content">
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
 </mat-sidenav-container>
