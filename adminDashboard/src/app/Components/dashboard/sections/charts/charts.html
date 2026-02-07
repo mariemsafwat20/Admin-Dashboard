@@ -2,7 +2,21 @@
     <!-- Line Chart --> 
     <mat-card class="chart-card line-chart"> 
         <mat-card-header> 
-            <mat-card-title>Report</mat-card-title> 
+            <div class="card-title-with-filters"> 
+                <div class="title">
+                    <span class="title-text">Report</span>
+                    <div class="subtitle-text">
+                        <span class="text">sales</span>
+                        <mat-icon>keyboard_arrow_down</mat-icon>
+                    </div>
+                </div>
+                <div class="filters">
+                    <span>Day</span>
+                    <span class="active">Week</span>
+                    <span>Month</span>
+                    <span>Year</span>
+                </div>
+            </div>
         </mat-card-header> 
         <mat-card-content> 
             <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" 
@@ -13,8 +27,8 @@
     
     <!-- Bar Chart --> 
     <mat-card class="chart-card bar-chart"> 
-        <mat-card-header> 
-            <mat-card-title class="card-title-with-filters">
+       <mat-card-header>
+            <div class="card-title-with-filters">
                 <span class="title-text">Visits</span>
                 <div class="filters">
                     <span>D</span>
@@ -22,8 +36,9 @@
                     <span>M</span>
                     <span>Y</span>
                 </div>
-            </mat-card-title>
-        </mat-card-header> 
+            </div>
+        </mat-card-header>
+
         <mat-card-content> 
             <canvas baseChart [data]="{ labels: barChartLabels, datasets: barChartData }" 
                 [options]="barChartOptions" [type]="barChartType"> 

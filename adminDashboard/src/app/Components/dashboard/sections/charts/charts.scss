@@ -7,23 +7,47 @@
         background-color: #fff; 
         border-radius: 10px; 
         
-        .card-title-with-filters { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            width: 100%; 
-        } 
+        // make chart fill the card
+        canvas {
+            width: 100% !important; 
+            height: 300px;
+        }
+
+        .card-title-with-filters {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
         
+        // Sales
+        .title { 
+            display: flex; 
+            align-items: center;
+            gap: 5px;
+        }
+ 
+        // Title(reports, visits)
         .title-text { 
             font-weight: bold; 
             font-size: 18px; 
             font-family: "League Spartan", sans-serif; 
-            margin-bottom: 10px; 
         } 
         
+        // Subtitle box
+        .subtitle-text {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 15px;
+            border: 1px solid #BEC9CF;
+            padding: 1px 10px;
+            color: #9AA0A4;
+            font-size: 12px;
+        }
+
+        // D W M Y filters
         .filters { 
             display: flex; 
-            gap: 8px; 
+            gap: 5px; 
         } 
         
         .filters span { 

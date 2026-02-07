@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
-import { ChartOptions, ChartType, ChartDataset, ChartConfiguration, ChartData, ChartTypeRegistry } from 'chart.js';
+import { MatCard, MatCardContent, MatCardHeader,  } from '@angular/material/card';
+import { MatIcon } from '@angular/material/icon';
+import { ChartOptions, ChartType, ChartDataset, ChartData } from 'chart.js';
 import { NgChartsModule } from 'ng2-charts';
+
 @Component({
   selector: 'app-charts',
   imports: [
     MatCard,
     MatCardHeader,
     MatCardContent,
-    MatCardTitle,
+    MatIcon,
     NgChartsModule
   ],
   templateUrl: './charts.html',
@@ -21,27 +23,35 @@ export class Charts {
   // Line Chart
   lineChartData: ChartData<'line', number[], string> = {
     labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [ { data: [20000, 50000, 70000, 100000], label: 'Sales' }]
+    datasets: [ { data: [20000, 50000, 70000, 100000] }]
   };
 
   // Chart Options with currency formatting
   private yAxisValues = [20000, 50000, 70000, 100000];
+
+  // Line Chart Options with legend removed
   lineChartOptions: ChartOptions<'line'> = {
     responsive: true,
+    plugins: {
+      legend: {
+        // remove the red circle and label
+        display: false,
+      },
+    },
     scales: {
       y: {
         ticks: {
-          // Only display tick if it exists in yAxisValues
           callback: (value) => {
             if (this.yAxisValues.includes(Number(value))) {
               return '$' + (Number(value) / 1000) + 'k';
             }
             return '';
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
   };
+
 
   // Bar Chart - Visits
   barChartType: ChartType = 'bar';
