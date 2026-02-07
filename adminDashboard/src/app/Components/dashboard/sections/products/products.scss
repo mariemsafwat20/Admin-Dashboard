@@ -1,3 +1,30 @@
+
+// Recent Products
+.title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .title-product {
+        font-weight: bold; 
+        font-size: 18px; 
+        font-family: "League Spartan", sans-serif;
+        color: #000; 
+    }
+
+    .subtitle-text {
+        display: flex;
+        align-items: center;
+        color: #ACB7BD;
+
+        .text {
+            font-size: 14px;
+            color: #ACB7BD;
+            cursor: pointer;
+        }
+    }
+}
+
 table {
     width: 100%;
     padding: 10px;
@@ -16,9 +43,9 @@ table {
         color: #A6A9AA;
     }
 
-
     // padding to body
     .mat-mdc-row .mat-mdc-cell {
         padding: 5px 15px;
     }
+
 }

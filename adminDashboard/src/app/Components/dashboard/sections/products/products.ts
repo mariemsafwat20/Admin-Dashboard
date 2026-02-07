@@ -5,6 +5,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ShortTitlePipe } from '../../../../Core/Pipes/short-title-pipe';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-products',
@@ -12,6 +13,7 @@ import { ShortTitlePipe } from '../../../../Core/Pipes/short-title-pipe';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatIcon,
     ShortTitlePipe
   ],
   templateUrl: './products.html',
@@ -33,6 +35,7 @@ export class Products {
       next: (data) => {
         // only take 5 products for display
         this.products = data.slice(0, 5);
+        this.cd.detectChanges();
         console.log('Products:', this.products);
       },
       error: (err) => {
