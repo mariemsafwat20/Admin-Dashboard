@@ -1,0 +1,20 @@
+<div class="analytics-cards" fxLayout="row" fxLayoutGap="16px" fxLayoutWrap>
+    <mat-card *ngFor="let card of cards" class="card">
+        <mat-card-content class="card-content">
+        <!-- icon -->
+        <mat-icon class="card-icon">{{ card.icon }}</mat-icon>
+        <div class="card-info">
+            <!-- Title -->
+            <p class="card-title">{{ card.title }}</p>
+            <div class="card-number">
+                <span class="value">{{ card.value }}</span>
+                <!-- Show trend only if exists -->
+                <span *ngIf="card.trend" class="trend" 
+                    [ngClass]="{'positive': card.trendPositive, 'negative': !card.trendPositive}">
+                    {{ card.trend }}
+                </span>
+            </div>
+        </div>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,69 @@
+.analytics-cards {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+
+    .card {
+        flex: 1 1 220px;
+        min-width: 220px;
+        background: #fff;
+        border-radius: 17px;
+        box-shadow: 0px 21px 94px rgba(0, 0, 0, 0.1);
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .card-icon {
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                background-color: #E3F6FF;
+                font-size: 30px;
+                color: #0561FC;
+                text-align: center;
+            }
+
+            .card-info {
+                .card-title {
+                    font-size: 14px;
+                    color: #160505;
+                    font-weight: 500;
+                    font-family: 'Jost', sans-serif;
+                    margin: 0;
+                }
+
+                .card-number {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    .value {
+                        font-size: 20px;
+                        font-weight: bold;
+                        font-family: "League Spartan", sans-serif;
+                    }
+
+                    .trend {
+                        font-size: 12px;
+                        font-weight: bold;
+
+                        &.positive { 
+                            border-radius: 12px;
+                            padding: 2px 7px;
+                            color: #65C565;                         
+                            background-color: #E3F4E3;
+                        }
+                        &.negative {
+                            border-radius: 12px;
+                            padding: 2px 7px;
+                            color: #C56565; 
+                            background-color: #F4E3E3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
